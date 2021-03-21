@@ -1,0 +1,26 @@
+.title{
+position:absolute;
+top:48%;
+left:50%;
+transform: translate(-50%,-50%);
+}
+
+.button{
+position:absolute;
+top:90%;
+left:50%;
+transform: translate(-50%,-50%);
+}
+.ml2 {
+  font-weight:800;
+  color: #fff;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.card{
+	box-shadow:-30px 30px 20px rgba(0,0,0,0.3);
+	background-color:rgba(103, 128, 159, 1);
+}
