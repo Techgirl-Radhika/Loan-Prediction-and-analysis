@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+ <title>Loan form page</title>
+</head>
+<style>
+	body
+	{
+	   font-family:Arial,san-serif;
+	   
+	}
+	div
+	{
+		border-radius:5px;
+		background-color:#f1f1f1;
+		padding:15px;
+		border:thin solid black;
+		margin-top:3%;
+	
+	}
+	
+	input[type=submit] {
+	  background-color:#008080;
+	  color: white;
+	  padding: 10px 10px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  font-size:medium;
+	  position:relative;
+	  margin-left:38%;
+	  width:18%;
+	 }
+	
+	button{
+	  background-color: black;
+	  color: white;
+	  padding: 10px 10px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  font-size:medium; 
+	  
+	
+	}
+	label{
+		margin:9px 9px;
+	}
+	input[type=text],input[type=date]{
+	  width: 100%;
+	  padding: 10px 15px;
+	  margin:8px 12px;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	   
+	}
+	select
+	{
+	  width: 30%;
+	  padding: 10px 10px;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing:border-box;
+	  margin:10px 15px;
+	}
+	select.propertyarea{
+	  margin:10px 15px;
+	  width:50%;
+	  margin-right:30%;
+	}
+	h2
+	 {
+		font-weight:bold;
+		 font-family:monospace;
+	 }
+	 
+	 
+	</style><body>
+     <div class="container">
+	 <b><center><h2>LOAN APPLICATION</h2></center></b>
+	 <br>
+	 <h4 style="color:green">Fill the form to get your Loan eligibility instantly!!!</h4>
+	 <hr>
+		    <form class="form-inline"action={{url_for('loan')}} method="POST">
+		  <!-- <label for="date of birth">Date of Birth:</label>
+		   <input type="date" id="date of birth" placeholder="Enter DOB" /required>
+		   -->
+				<!--applicant income-->
+		   <label for="applicant income">Applicant Income:</label>
+		    <input type="text" id="applicant income" name="applicant_income" placeholder="Enter Applicant's Income">
+
+				<!--co-applicant income-->
+				<label for="coapplicant income">Co-Applicant Income:</label>
+		   <input type="text" id="coapplicant income" name="coapplicant_income" placeholder="Enter Co-Applicant's Income"><br><br>
+
+				<!--Loan amount-->
+				<label for="loan_amount">Loan Amount:</label>
+		   <input type="text" id="loan_amount" name="loan_amount" placeholder="In Rs."><br><br>
+
+				<!--Loan Amount Term-->
+			 <label for="loan_amount_term">Loan Amount Term:</label>
+		   <input type="text" id="loan_amount_term" name="loan_amount_term" placeholder="In Months">
+
+				<!--Credit_history-->
+				
+            <label for="credit-history">Credit History:</label>
+		   <input type="text" id="credit-history" name="credit_history" placeholder="Enter Credit history">
+
+				<!--marital status-->
+		   <label for="marital status">Marital Status:</label>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+		   <select id="marital status" name="marital_status">
+		   <option value="0">Married</option>
+		   <option value="1">Unmarried</option>
+		   </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<!--gender-->
+				<label for="gender">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <select id="gender" name="gender">
+		   <option value="1">Male</option>
+		   <option value="0">Female</option>
+		   </select><br><br> &nbsp;&nbsp;&nbsp;&nbsp; <br>
+		   
+
+		   <!--edu_qualification-->
+		   <label for="edu_qualification">Educational Qualification:</label>
+		   <select id="edu_qualification" name="edu_qualification">
+		   <option value="0">Graduate</option>
+		   <option value="1">Under Graduate</option>
+		   </select><br><br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+
+				<!--self employed-->
+				<label for="self employed">Self Employeed</label>
+		   <select id="self employed" name="self_employed">
+		   <option value="1">Yes</option>
+		   <option value="0">No</option>
+		   </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+		  <!--Property_area-->
+		  <label for="property area">Property Area:</label>
+		   <select class="propertyarea" name="property_area">
+		   <option value="0">Rural</option>
+		   <option value="1">Semi-Urban</option>
+		   <option value="2">Urban</option>
+		   </select>
+           <!--Dependents-->
+           <label for="no of dependents">Number Of Dependents:</label>
+		   <input type="text" id="no of dependents" name="dependents" placeholder="Enter number of Dependents">
+				
+           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+		<br><br><br>
+		  <input type="submit" value="loan">
+		 &nbsp;&nbsp;&nbsp;&nbsp; 
+      </form><center>
+	  <a href="{{url_for('home')}}"><button type="submit" value="back">Back</button></a></center>
+	 </div>
+	 <br><h4 align="center"><b>{{predd}}</b></h4>
+	 <!--  Scripts-->
+	 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	 <script src="C:\Users\HP\Desktop\sdlProject\static\materialize.js"></script>
+	 <script src="C:\Users\HP\Desktop\sdlProject\static\init.js"></script>
+	 
+	 
+
+
+
+ 
+
+</body>
+
+</html>

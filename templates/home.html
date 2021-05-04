@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <!-- Popper JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>Loan home page</title>
+
+    
+
+
+
+</head>
+<body>
+    
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-light" style="background-color:rgb(1, 110, 33)">
+        <a class="navbar-brand text-warning font-weight-bold" href="#">
+    <i class='fas fa-piggy-bank' style='font-size:30px;'></i></a>  
+       
+       <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+           <li class="nav-item active">
+             <a class="nav-link text-white " href="#"><b>HOME</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link text-white" href="#"><b>PREDICT</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+           </li>
+             
+             <li class="nav-item">
+                <a class="nav-link text-white" href="{{url_for('contact')}}"><b>CONTACT</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+           </li>
+        </ul>
+     </nav> 
+  <div class="container-fluid">
+   <div class="row">
+     <img class="d-block w-100" src='..\static\loan-backgroud.jpg' alt="First slide" height="610px">
+       <div class="title">
+        <center><h1 class="ml2" style="color:white;">Loan Prediction System</h1>
+        <p style="color:red"><b>WE HELP YOU TO FULLFIL YOUR DREAMS</b></p>
+             <a href="{{url_for('loan')}}">
+         <button type="submit" class="btn btn-outline-success" value="subm">Predict Approval</button>&nbsp;&nbsp;&nbsp;&nbsp;
+             </a>
+          </center>  
+          </div>
+       </div>
+   </div>
+<br>
+<center><h3 style="color: blue;">ARE YOU WORRY FOR GETTING LOAN OR NOT? </h3></center><br>
+<center><h4>HERE WE COME UP WITH JUST 3 STEPS:-  </h4></center><br>
+<div class="container mt-3">&nbsp;&nbsp;&nbsp;
+<div class="row mx-auto">
+<div class="col-lg-4 col-md-3 col-sm-10 col-10">
+<div class="card border-dark mb-2" style="width: 18rem; height: 10rem ;background-color:rgb(216, 181, 250);">
+<h5 class="mt-2"><center>STEP 1 &nbsp; </center></h5>
+<div class="card-body"> 
+   <p class="card-text">Just go in the prediciton section or just hit on predict button</p>
+ </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-3 col-sm-10 col-10">
+<div class="card border-dark mb-3" style="width: 18rem;height: 10rem ;background-color:rgb(216, 181, 250);">
+<h5 class="mt-2"><center>STEP 2</center></h5>
+ <div class="card-body">
+   <p class="card-text">Get your loan approval chance by providing few necessary informations.</p>
+ </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-3 col-sm-10 col-10">
+<div class="card border-dark mb-3" style="width: 18rem;height: 10rem;background-color:rgb(216, 181, 250);">
+<h5 class="mt-2"><center>STEP 3</center></h5>
+ <div class="card-body">
+   <p class="card-text">Here is your Chance !! Thanks for visiting us</p>
+ </div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div class="container-fluid bg-dark p-3 mt-3">
+   <div class="row">
+   <div class="col-md-4 footer-column">
+       <ul class="nav flex-column">
+            <span class="footer-title text-white ml-3"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;LOCATION</span>
+            <p class="text-muted  mt-2 ml-3">K.K.WAGH INSTITUTE ENGINEERING AND EDUCATIONAL RESEARCH,NASHIK</p>
+         </li>  
+       </ul>
+     </div>
+     <div class="col-md-4 footer-column">
+       <ul class="nav flex-column">
+         <li class="nav-item">
+           <span class="footer-title text-white ml-3"><i class="fa fa-female" aria-hidden="true"></i>
+               &nbsp;MADE BY</span>
+             <p class="text-muted mt-2 ml-3"> Radhika Agrawal ,Pratishta Shelke , Karishma Saudagar , Parnavi Joshi </p>
+         </li>  
+       </ul>
+     </div>
+     <div class="col-md-4 col-lg-3 footer-column">
+
+       <!-- Contact details -->
+       <span class="text-uppercase mb-4 text-white ml-3"><i class="fa fa-phone"></i>&nbsp;Contact Us</span>
+
+       <ul class="list-unstyled">
+         
+         <li>
+           <p class="text-muted mt-2 ml-3">
+             <i class="fas fa-envelope mr-3"></i> loanprediction@gmail.com</p>
+         </li>
+         <li>
+           <p class="text-muted mt-2 ml-3">
+             <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+         </li>
+         <li>
+           <p class="text-muted mt-2 ml-3">
+             <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+         </li>
+       </ul>
+
+     </div>
+     
+   </div>
+   </div>
+ <!-- Copyright -->
+ <div class="footer-copyright text-center py-3 bg-secondary">© 2020 Copyright:
+   <a href="#" class="text-white">loansystem.com</a>
+ </div>
+ <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<script type="text/javascript">
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+ .add({
+   targets: '.ml2 .letter',
+   scale: [4,1],
+   opacity: [0,1],
+   translateZ: 0,
+   easing: "easeOutExpo",
+   duration: 950,
+   delay: (el, i) => 70*i
+ }).add({
+   targets: '.ml2',
+   opacity: 0,
+   duration: 1000,
+   easing: "easeOutExpo",
+   delay: 1000
+ });
+ </script>
+
+
+</body>
+</html>
